@@ -12,12 +12,12 @@ Possible alias setup per team might be:
     # Team A k8s env shortcuts
     alias k8s-aa-dev="kubectl --kubeconfig=${HOME}/.kube/config.aa-dev --namespace=dev"
     alias k8s-aa-qa="kubectl --kubeconfig=${HOME}/.kube/config.aa-dev --namespace=qa"
-    alias k8s-ma-stage="kubectl --kubeconfig=${HOME}/.kube/config.aa-prod --namespace=stage"
+    alias k8s-aa-stage="kubectl --kubeconfig=${HOME}/.kube/config.aa-prod --namespace=stage"
     alias k8s-aa-production="kubectl --kubeconfig=${HOME}/.kube/config.aa-prod --namespace=production"
 
     # Team A k8s default namespaces
     alias k8s-aa-dev-default="kubectl --kubeconfig=${HOME}/.kube/config.aa-dev --namespace=default"
-    alias k8s-aa-prod-default="kubectl --kubeconfig=${HOME}/.kube/config.bi-prod --namespace=default"
+    alias k8s-aa-prod-default="kubectl --kubeconfig=${HOME}/.kube/config.aa-prod --namespace=default"
 
     # Team A k8s system namespaces
     alias k8s-aa-dev-sys="kubectl --kubeconfig=${HOME}/.kube/config.aa-dev --namespace=kube-system"
@@ -31,6 +31,6 @@ Note:
 
 - If you only access k8s for a single team, the `-aa` or `-bb` differentiator is probably unnecessary.
 
-- If you'd prefer a couple less keystrokes per command something like `k-*` or `k*` instead of `k8s-*` is viable. However, in the example above the alias for prod is `k8s-aa-production`. I intentionally made it longer to not only accurately match the real namespace, but also to give myself a couple extra mental cycles as I type it out to ensure that, actually yes, I do want to run this command against _production_. :)
+- If you'd prefer a couple less keystrokes per command something like `k-*` or `k*` instead of `k8s-*` is viable. However, note that in the example above the alias for prod is `k8s-aa-production`. I intentionally made it longer to not only accurately match the real namespace, but also to give myself a couple extra mental cycles as I type it out to ensure that, actually yes, I do want to run this command against _production_. :)
 
 Regardless, the idea of the command indicating the env is to me the key part of this.
